@@ -23,6 +23,7 @@ class FirstPersonFragment : Fragment() {
     lateinit var firstPersonRecycleAdapter: FirstPersonRecycleAdapter
 
 
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
             return inflater?.inflate(R.layout.fragment_first_person, container, false)
     }
@@ -35,9 +36,11 @@ class FirstPersonFragment : Fragment() {
         firstPersonRecycler.adapter = firstPersonRecycleAdapter
         val layoutManager = LinearLayoutManager(context)
         firstPersonRecycler.layoutManager = layoutManager
-        firstPersonRecycleAdapter.addItems(FirstPersonDataService.firstPersons[0])
+      //  firstPersonRecycleAdapter.addItems(FirstPersonDataService.firstPersons[0])
 
     }
+
+
 
 
 }// Required empty public constructor

@@ -16,7 +16,7 @@ import product.app.com.testapp.R
  * Created by Chris on 20/02/2019.
  */
 class SecondPersonRecycleAdapter(val context: Context, val secondPerson: List<SecondPersonData>, val itemClick: (Int)-> Unit):
-        BaseRecyclerViewAdapter<SecondPersonData,SecondPersonRecycleAdapter.Holder>(){
+        BaseRecyclerViewAdapter<SecondPersonData,SecondPersonRecycleAdapter.Holder>(secondPerson){
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bindLocationData(getData(position), context)
     }

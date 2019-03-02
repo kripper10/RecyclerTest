@@ -35,8 +35,9 @@ class SecondPersonFragment : Fragment() {
         secondPersonRecycler.adapter = secondPersonAdapter
         val layoutManager = LinearLayoutManager(context)
         secondPersonRecycler.layoutManager = layoutManager
-        secondPersonAdapter.addItems(SecondPersonDataService.secondPersons[0])
-        //testing for this
+        //secondPersonAdapter.addItems(SecondPersonDataService.secondPersons[0])
+
+
 
 
 
