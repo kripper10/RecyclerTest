@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     fun updateFirstPersonSet(value: Int){
 
         searchFragment.setResults(FirstPersonDataService.firstPersons[value].count(),
-                SecondPersonDataService.secondPersons[value].count())
+                SecondPersonDataService.secondPersons[value].count(), value)
 
     }
 }

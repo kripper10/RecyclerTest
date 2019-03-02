@@ -42,8 +42,8 @@ class SearchFragment : Fragment() {
     }
 
 
-    fun setResults(firstpersonCount: Int, secondPersonCount: Int){
-        searchView.personResultsVP.adapter = MyResultAdapter(childFragmentManager, firstpersonCount, secondPersonCount)
+    fun setResults(firstpersonCount: Int, secondPersonCount: Int, indexSelected: Int){
+        searchView.personResultsVP.adapter = MyResultAdapter(childFragmentManager, firstpersonCount, secondPersonCount, indexSelected)
         searchView.tabs_main.setupWithViewPager(searchView.personResultsVP)
     }
 

@@ -8,15 +8,12 @@ import product.app.com.testapp.Fragments.SecondPersonFragment
 
 
 
-class MyResultAdapter(fm: FragmentManager, val firstPersonCount: Int,val secondPersonCount:Int) : FragmentPagerAdapter(fm) {
-
-
-
+class MyResultAdapter(fm: FragmentManager, val firstPersonCount: Int,val secondPersonCount:Int, val indexSelected: Int) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         if(firstPersonCount > 0 && secondPersonCount > 0){
             return when (position) {
-                0 -> FirstPersonFragment()
+                0 -> FirstPersonFragment.newInstance(indexSelected)
                 else -> {
                     SecondPersonFragment()
                 }
